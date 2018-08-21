@@ -14,5 +14,10 @@ yarn config set registry https://registry.npm.taobao.org
 yarn'''
       }
     }
+    stage('Test') {
+      steps {
+        sh 'echo \'OK\''
+      }
+    }
   }
 }
