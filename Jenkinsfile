@@ -15,8 +15,11 @@ yarn'''
       }
     }
     stage('Test') {
+      environment {
+        CI = 'true'
+      }
       steps {
-        sh 'echo \'OK\''
+        sh './jenkins/scripts/test.sh'
       }
     }
   }
